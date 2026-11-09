@@ -5,7 +5,7 @@
 //  Created by Christopher W. Kenny on 11/6/26.
 //
 import ChessKit
-import ChessboardKit
+
 
 //Class that handles all of the chess logic utilizing ChessKit
 final class ChessEngine{
