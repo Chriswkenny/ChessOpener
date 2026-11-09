@@ -35,7 +35,7 @@ struct LichessService{
     
     var token: String? = nil
     var session: URLSession = .shared
-    private let baseURL = "https://lichess.org/"
+    private let baseURL = "https://explorer.lichess.ovh/lichess"
     //Async function to find next move computer makes
     func nextMove(fen: String) async throws -> ExplorerResult{
         //Verify url is correct to Lichess
