@@ -10,7 +10,7 @@ import SwiftUI
 
 
 struct ChessGameView: View{
-    //Create instance of ObservableObject (view model) for the game
+    //Create instance of game for ViewModel
     @State private var vm = ChessViewModel()
     @State private var hasStarted = false
     
@@ -33,7 +33,7 @@ struct ChessGameView: View{
                     }
                     vm.userMoved(lan: lan)
                 }
-                .aspectRatio(contentMode: .fit)
+                .aspectRatio(1, contentMode: .fit)
                 .padding(.horizontal)
             
             if vm.isThinking {
@@ -53,26 +53,26 @@ struct ChessGameView: View{
                     vm.startGame(as: .black)
                 }
             }//HStack
-            .buttonStyle(style: .bordered)
+            .buttonStyle(.bordered)
         }//VStack
         .padding(.vertical)
         .task{
-            guard hasStarted
+            guard !hasStarted
                 else{
                 return
             }
             hasStarted = true
-            vm.startGame(as: PlayerSide?)
+            vm.startGame(as: .white)
         }
     }
 }
 
 //MARK: Move List
 struct MoveListView: View{
-    let moves = [MoveRecord]
+    let moves: [MoveRecord]
     
     var body: some View {
-        ScrollViewProxy { proxy in
+        ScrollViewReader { proxy in
             ScrollView(.horizontal, showsIndicators: false){
                 HStack(spacing:10){
                     ForEach(moves) {m in
@@ -87,13 +87,13 @@ struct MoveListView: View{
                 }
                 .padding(.horizontal)
             }
-            //Ensure validation through ChessKit using .onchange property
+            //scroll list to newest move
             .onChange(of: moves.count){
                 if let last = moves.last {
                     withAnimation {proxy.scrollTo(last.id)}
                 }
             }
         }
-        .frame(width: 20, height: 20)
+        .frame(width: 30, height: 30)
     }
 }//MoveListView struct
