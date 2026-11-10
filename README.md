@@ -16,20 +16,26 @@ in all chess opening lines), using Long Algebraic Notation (LAN) for displaying 
 Utilizes the MVVM model:
 
 Model: 
+
 OpeningModels - Contains the Explorer Models, establishes variables that are required for the user's perspective (white/black), the opening being played,
                 and the computer's response to moves.
+
 Chess Engine - Contains the ChessKit package which handles the legality of chess moves.
 
 ViewModel:
+
 ChessViewModel - Stores the data to be displayed on ChessGameView. Utilizes async to await users move for the computer to send a response based on
                  the most popular responses to the current board structure. 
 
 View:
+
 ChessGameView - Contains the ChessboardKit package which is responsible for displaying the chess board.
 
 Chess Engine:
+
 ChessEngine - Contains the ChessKit package which handles the legality of chess moves.
 
 Services:
+
 LichessService - Handles the calls to the Lichess opening explorer, establishing a connection to the database to be used for the computers response
                  to users input as long as the users move is a correct move in the opening sequence.
