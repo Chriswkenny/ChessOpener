@@ -20,7 +20,6 @@ Model:
 OpeningModels - Contains the Explorer Models, establishes variables that are required for the user's perspective (white/black), the opening being played,
                 and the computer's response to moves.
 
-Chess Engine - Contains the ChessKit package which handles the legality of chess moves.
 
 ViewModel:
 
