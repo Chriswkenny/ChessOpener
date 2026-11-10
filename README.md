@@ -14,6 +14,7 @@ in all chess opening lines), using Long Algebraic Notation (LAN) for displaying 
 
 # Structure
 Utilizes the MVVM model:
+
 Model: 
 OpeningModels - Contains the Explorer Models, establishes variables that are required for the user's perspective (white/black), the opening being played,
                 and the computer's response to moves.
