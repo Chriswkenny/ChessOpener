@@ -54,7 +54,7 @@ that may be stronger as per the Chess Engine.
 There is currently no way to create an account to store your progress in an opening line (verifying the move is 'legal' in the sequence and if its the best possible move).
 Could potentially add a scoring system that saves the users progress in an opening line, eventually "mastering" that specific opening. 
 
-Considering to import Stockfish to create an evaluation bar as seen in other chess applications so the user can get a sense of if the grandfather chess engine (Stockfish) considers the opening strong or weak, depending on what variation of the opening the user is attempting to learn. 
+Considering to import ChessKitEngine to create an evaluation bar as seen in other chess applications, which acts similarly to Stockfish (the grandfather chess engine of moves/evaluation), considers the opening strong or weak, depending on what variation of the opening the user is attempting to learn. Would use ChessKitEngine as it is built by MIT and works directly with the ChessKit package that is used in the ChessEngine class. 
 
 Need to strengthen the "Incorrect move, try again" message as it only displays if the user makes a move that the Lichess API does not see in its sequence (example: playing Knight a3 while in the middle of development in the English). Also need to establish a way for the user to attempt another move if they receive the Incorrect move message. 
 
