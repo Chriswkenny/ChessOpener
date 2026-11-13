@@ -48,8 +48,14 @@ The application currently requires a Lichess account with no way for users to be
 add the users Lichess account with a single button click.
 
 There is currently no selection method of what opening the user wishes to learn. While the application dynamically changes the title as the "game" progresses of what line the computer
-is playing in response to the users move, I intend on allowing the user to select a specific opening and add a rating to the move the user makes versus other possible moves in the sequence
+is playing in response to the users move, I intend on allowing the user to select a specific opening and add a rating (Best, Excellent, Good, incorrect) to the move the user makes versus other possible moves in the sequence
 that may be stronger as per the Chess Engine. 
 
 There is currently no way to create an account to store your progress in an opening line (verifying the move is 'legal' in the sequence and if its the best possible move).
 Could potentially add a scoring system that saves the users progress in an opening line, eventually "mastering" that specific opening. 
+
+Considering to import Stockfish to create an evaluation bar as seen in other chess applications so the user can get a sense of if the grandfather chess engine (Stockfish) considers the opening strong or weak, depending on what variation of the opening the user is attempting to learn. 
+
+Need to strengthen the "Incorrect move, try again" message as it only displays if the user makes a move that the Lichess API does not see in its sequence (example: playing Knight a3 while in the middle of development in the English). Also need to establish a way for the user to attempt another move if they receive the Incorrect move message. 
+
+
